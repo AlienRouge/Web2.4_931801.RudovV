@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "List Box";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="ControlHandler" asp-controller="Controls">
+            <h2>List Box</h2>
+            <b>Month</b>
+
+            <input name="type" class="form-control "
+                   style="display: none" value="ListBox"/>
+
+            @if (ViewBag.Visible)
+            {
+        <select name="answer" class="form-control" size="12">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+                <br />
+                <input type="submit" value="Submit" />
+            }
+            else
+            {
+                @ViewBag.Answer
+            }
+        </form>
+    </div>
+</div>

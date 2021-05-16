@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Radio";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="ControlHandler" asp-controller="Controls">
+            <h2>Radio</h2>
+            <b>Month</b>
+
+            <input name="type" class="form-control "
+                   style="display: none" value="Radio" />
+
+            @if (ViewBag.Visible)
+            {
+                <p><input name="answer" type="radio" value="January">January</p>
+                <p><input name="answer" type="radio" value="February">February</p>
+                <p><input name="answer" type="radio" value="March">March</p>
+                <p><input name="answer" type="radio" value="April">April</p>
+                <p><input name="answer" type="radio" value="May">May</p>
+                <p><input name="answer" type="radio" value="June">June</p>
+                <p><input name="answer" type="radio" value="July">July</p>
+                <p><input name="answer" type="radio" value="August">August</p>
+                <p><input name="answer" type="radio" value="September">September</p>
+                <p><input name="answer" type="radio" value="October">October</p>
+                <p><input name="answer" type="radio" value="November">November</p>
+                <p><input name="answer" type="radio" value="December">December</p>
+                <br />
+                <input type="submit" value="Submit" />
+            }
+            else
+            {
+                @ViewBag.Answer
+            }
+        </form>
+    </div>
+</div>

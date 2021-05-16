@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Check Box";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="ControlHandler" asp-controller="Controls">
+
+            <input name="type" class="form-control "
+                   style="display: none" value="CheckBox" />
+            <h2 style="box-sizing: content-box">Check Box</h2>
+            <b>IsSelected</b>
+            @if (ViewBag.Visible)
+            {
+                <input type="checkbox" name="answer" class="form-control" />
+                <br />
+                <input type="submit" value="Submit" />
+            }
+            else
+            {
+                @ViewBag.Answer
+            }
+        </form>
+    </div>
+</div>

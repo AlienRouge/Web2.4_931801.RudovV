@@ -1,0 +1,13 @@
+﻿@model WebApplication1.Models.ResetModel
+@{
+    ViewData["Title"] = "Reset your password";
+}
+
+<h2>Reset your password</h2>
+@Model.Message
+<form method="post">
+    <label><b>Code</b></label><br />
+    <input type="text" name="Code" /><br />
+    <br />
+    <input class="btn btn-light col-md-auto" style="display: inline" type="submit" value="Verify" />
+</form>
